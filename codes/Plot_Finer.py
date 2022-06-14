@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Plotting for the finer grid resolution
+Plot for the finer grid resolution
 """
 import numpy as np
 import matplotlib
