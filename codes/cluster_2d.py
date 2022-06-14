@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Final Project: CSs clusters (work with TB)
+CSs clusters (work with TB)
 """
 import numpy as np
 import matplotlib
