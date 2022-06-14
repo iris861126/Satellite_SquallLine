@@ -27,7 +27,6 @@ time = [240,248,240,240,248,240,248,224,248,248]
 
 # declare the vaiables
 cldamt_types = np.zeros((40,18,180,360))    # for HGG
-
 itmp         = np.zeros((40,1800,3600))     # for HXG
 cloud        = np.zeros((40,1800,3600))     # for HXG
 ws           = np.zeros((8*303,360,180))    # for HGGWS
@@ -47,16 +46,8 @@ for f in files:
     i += 1
     
 #%% save the cloudamt data from HGG
-np.save('cldamt_1.npy' ,cldamt_types[  0: 4,:,:,:])
-np.save('cldamt_2.npy' ,cldamt_types[  4: 8,:,:,:])
-np.save('cldamt_3.npy' ,cldamt_types[  8:12,:,:,:])
-np.save('cldamt_4.npy' ,cldamt_types[ 12:16,:,:,:])
-np.save('cldamt_5.npy' ,cldamt_types[ 16:20,:,:,:])
-np.save('cldamt_6.npy' ,cldamt_types[ 20:24,:,:,:])
-np.save('cldamt_7.npy' ,cldamt_types[ 24:28,:,:,:])
-np.save('cldamt_8.npy' ,cldamt_types[ 28:32,:,:,:])
-np.save('cldamt_9.npy' ,cldamt_types[ 32:36,:,:,:])
-np.save('cldamt_10.npy',cldamt_types[ 36:40,:,:,:])
+for i in range(10):
+  np.save('cldamt_{}.npy'.format(i+1) ,cldamt_types[(i*4):(i+1)*4, :, :, :])
 
 #%% HXG data
 path = '/Users/joyuwu/碩一下/衛星/final_project/HXG_data'
@@ -76,27 +67,9 @@ for f in files:
 mask_cloud = np.where(cloud==1,cloud,0)
 
 # save the TB, cloud data from HXG
-np.save('it_1.npy' ,itmp[  0: 4,:,:])
-np.save('it_2.npy' ,itmp[  4: 8,:,:])
-np.save('it_3.npy' ,itmp[  8:12,:,:])
-np.save('it_4.npy' ,itmp[ 12:16,:,:])
-np.save('it_5.npy' ,itmp[ 16:20,:,:])
-np.save('it_6.npy' ,itmp[ 20:24,:,:])
-np.save('it_7.npy' ,itmp[ 24:28,:,:])
-np.save('it_8.npy' ,itmp[ 28:32,:,:])
-np.save('it_9.npy' ,itmp[ 32:36,:,:])
-np.save('it_10.npy',itmp[ 36:40,:,:])
-
-np.save('cld_1.npy' ,mask_cloud[  0: 4,:,:])
-np.save('cld_2.npy' ,mask_cloud[  4: 8,:,:])
-np.save('cld_3.npy' ,mask_cloud[  8:12,:,:])
-np.save('cld_4.npy' ,mask_cloud[ 12:16,:,:])
-np.save('cld_5.npy' ,mask_cloud[ 16:20,:,:])
-np.save('cld_6.npy' ,mask_cloud[ 20:24,:,:])
-np.save('cld_7.npy' ,mask_cloud[ 24:28,:,:])
-np.save('cld_8.npy' ,mask_cloud[ 28:32,:,:])
-np.save('cld_9.npy' ,mask_cloud[ 32:36,:,:])
-np.save('cld_10.npy',mask_cloud[ 36:40,:,:])
+for i in range(10):
+  np.save('it_{}.npy'.format(i+1) ,itmp[(i*4):(i+1)*4, :, :])
+  np.save('cld_{}.npy'.format(i+1) ,mask_cloud[(i*4):(i+1)*4, :, :])
 
 #%% WS data
 path_2 = '/Users/joyuwu/碩一下/衛星/final_project/WS_data'
