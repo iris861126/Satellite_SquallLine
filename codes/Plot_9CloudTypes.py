@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Final Project: Plotting [for 9 cloud types]
+Plotting 9 cloud types
 """
 import numpy as np
 import matplotlib
