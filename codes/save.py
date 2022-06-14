@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Final project: Save TB, cloud and WS data from HXG and HGGWS files
+Save TB, cloud and WS data from HXG and HGGWS files
 """
 import numpy as np
 import netCDF4 as nc
