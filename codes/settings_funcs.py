@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Final Project: General setting and functions
+General setting and functions
 """
 import numpy as np
 import cartopy.crs as ccrs
