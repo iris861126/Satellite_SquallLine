@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Final Project: CSs clusters(3d, including time dimension)
+CSs clusters(3d, including time dimension)
 """
 import numpy as np
 from skimage import measure
